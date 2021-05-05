@@ -27,6 +27,11 @@
 This project paper provides information on the impact of time series clustering on a machine learning (ML) forecasting method. Accurate point forecasts (PFs) for time series data are a challenging task for machine learning methods which still get regularly outperformed by much simpler statistical approaches. As shown in cite:Makridakis_2020, all machine learning methods submitted for the M4 competition had lower accuracy than the used combined benchmark method which consists of statistical methods only. Even worse the complexity of machine learning methods adds significant computational costs to a model without providing a useful reward for it.\\
 
 One question in this context is, whether time series can be combined in such a way that training one model with the appropriate subset simplifies the learning process and increases the point forecast accuracy. Machine Learning models usually have a need for lots of data to be able to perform well in their prediction tasks. For time series a long history is usually a rare commodity and seldomly available. Other approaches are needed if one wants to use ML methods. Therefore, it is interesting to verify whether time series that have similar properties provide additional PF accuracy when trained with the same ML model. A challenge is to choose the right time series properties to simplify the learning task for the algorithm. If done well it should allow for less complex models to achieve better performance by having more data to optimize the model parameters.
+
+The implementation for this project was created with Python and is available as GitHub repository[fn:github].
+
+[fn:github] https://github.com/philippbeer/m4_clustering
+
 ** Approach
 <<sec:approach>>
 A large pool of time series is available in the Makridakis competition. For this research project the daily series of the M4 competition was chosen to analyze whether a simple kMeans algorithm can help to cluster time series via its properties such that the same algorithm can perform more accurate forecasts with a high degree of certainty.
