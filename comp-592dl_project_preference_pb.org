@@ -1,0 +1,12 @@
+#+TITLE: COMP-592DL (Section 1) Project in Data Science
+#+AUTHOR: Philipp Beer
+#+EMAIL: beer.p@live.unic.ac.cy
+#+OPTIONS: toc:nil
+#+OPTIONS: num:0
+* Project in Data Science
+** Problem Description
+In this project I will investigate the possibility of categorizing the data sets from the M4 competition through an analysis of selected time series properties and seek a method to arrange them into highly correlated groups.
+** Supervisor
+Professor Spyros Makridakis
+** Comment
+The specific research problem is not yet finalized and requires further alignment with Prof. Makridakis.

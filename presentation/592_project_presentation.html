@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>592 Project Report</title>
+<meta name="author" content="(Philipp Beer)"/>
+<meta name="description" content="Literature review in time series clustering"/>
+<meta name="keywords" content="unic, 501dl, stassopoulou"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/blood.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<style>
+.reveal table {
+    font-size: 0.6em;
+}
+
+.reveal p {
+    font-size: 0.8em;
+}
+</style>
+
+
+<section>
+<section id="slide-orgc5e2b0e">
+<h2 id="orgc5e2b0e">Project Report 592 Project in Data Science</h2>
+
+<div id="org87fabd2" class="figure">
+<p><img src="https://552dlimages.s3-eu-west-1.amazonaws.com/unic_logo.png" alt="unic_logo.png" width="200px" />
+</p>
+</div>
+<br/>
+<p>
+Philipp Beer<br />
+Gradudate Program Data Science at UNIC
+</p>
+
+<p>
+COMP-501DL Research<br />
+Prof. Spyros Makridakis &amp; Prof. Ioannis Katakis<br />
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org45fdd97">
+<h3 id="org45fdd97">Introduction</h3>
+<div class="outline-text-3" id="text-org45fdd97">
+</div>
+</section>
+<section id="slide-orge15ee55">
+<h4 id="orge15ee55">M4 Competition Forecasting</h4>
+<ul>
+<li>Point forecasts challenging ML tasks</li>
+<li>regularly outperformed by M4 competition benchmark (statistical methods)</li>
+
+</ul>
+</section>
+<section id="slide-org626c5ac">
+<h4 id="org626c5ac">M4 Accuracy Metrics</h4>
+<p>
+\[ SMAPE = \frac{100}{n} \sum_{t=1}^{n} \frac{F_t - Y_t}{(\lvert F_t \rvert + \lvert Y_t \rvert)/2} \]
+\[ MASE = mean \left( \frac{\lvert e_j \rvert}{\frac{1}{T-1} \sum_{t=2}^{T} \lvert Y_t - Y_{t-1} \rvert} \right) \]
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orge4ba5f1">
+<h3 id="orge4ba5f1">Approach</h3>
+</section>
+</section>
+<section>
+<section id="slide-org101f797">
+<h3 id="org101f797">Time Series  Properties</h3>
+<div class="outline-text-3" id="text-org101f797">
+</div>
+</section>
+<section id="slide-org266e981">
+<h4 id="org266e981">ts fresh</h4>
+</section>
+<section id="slide-org5799115">
+<h4 id="org5799115">Feature Extraction</h4>
+</section>
+</section>
+<section>
+<section id="slide-org9f76689">
+<h3 id="org9f76689">Clustering</h3>
+<div class="outline-text-3" id="text-org9f76689">
+</div>
+</section>
+<section id="slide-orgb470ee4">
+<h4 id="orgb470ee4">Deciding k</h4>
+</section>
+</section>
+<section>
+<section id="slide-org9ebba7e">
+<h3 id="org9ebba7e">Forecasting</h3>
+<div class="outline-text-3" id="text-org9ebba7e">
+</div>
+</section>
+<section id="slide-orgf06e415">
+<h4 id="orgf06e415">Cross-Validation</h4>
+</section>
+</section>
+<section>
+<section id="slide-org0caaf63">
+<h3 id="org0caaf63">Benchmarking</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgee6c7d3">
+<h3 id="orgee6c7d3">Challenges</h3>
+<div class="outline-text-3" id="text-orgee6c7d3">
+</div>
+</section>
+<section id="slide-orgbe1caea">
+<h4 id="orgbe1caea">Data Preprocessing</h4>
+</section>
+<section id="slide-orge081090">
+<h4 id="orge081090">Computational Costs</h4>
+
+</section>
+</section>
+<section>
+<section id="slide-org8a0933b">
+<h3 id="org8a0933b">Results</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgad0914e">
+<h3 id="orgad0914e">Conclusion</h3>
+<div class="outline-text-3" id="text-orgad0914e">
+</div>
+</section>
+<section id="slide-orgd349179">
+<h4 id="orgd349179">Results of Cross-Validation</h4>
+
+<div id="org07de4a8" class="figure">
+<p><img src="../img/daily_cv_results.png" alt="daily_cv_results.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgd6c820c">
+<h4 id="orgd6c820c">Results on M4 test set</h4>
+
+<div id="orgeac0197" class="figure">
+<p><img src="../img/daily_m4_results.png" alt="daily_m4_results.png" />
+</p>
+</div>
+</section>
+<section id="slide-org5d1c14d">
+<h4 id="org5d1c14d"></h4>
+</section>
+<section id="slide-org7b66831">
+<h4 id="org7b66831">results not better than random</h4>
+</section>
+<section id="slide-org83c7418">
+<h4 id="org83c7418">Uncertainty in the clustering</h4>
+</section>
+<section id="slide-org62b3f22">
+<h4 id="org62b3f22"></h4>
+
+</section>
+</section>
+<section>
+<section id="slide-org5f38308">
+<h3 id="org5f38308">How to measure similarity</h3>
+</section>
+</section>
+<section>
+<section id="slide-org2a13fbe">
+<h3 id="org2a13fbe">Ts representation</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgcf2334b">
+<h3 id="orgcf2334b">Distance metrics</h3>
+</section>
+</section>
+<section>
+<section id="slide-org101f24f">
+<h3 id="org101f24f">Clustering algorithms</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgaa417de">
+<h3 id="orgaa417de">Limitations</h3>
+</section>
+</section>
+<section>
+<section id="slide-org957f569">
+<h3 id="org957f569">Conclusions</h3>
+<p>
+#### this the old template
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org58195d8">
+<h2 id="org58195d8"></h2>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc33afdf">
+<h2 id="orgc33afdf">Flajolet-Martin Implemenation</h2>
+<p>
+Philipp Beer
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgd33e702">
+<h3 id="orgd33e702">Counting cardinalities of Wikipedia entries</h3>
+<p>
+University of Nicosia
+</p>
+
+<p>
+COMP 552DL - Data Privacy and Ethics
+</p>
+
+<p>
+Prof. Dr. Thomas Liebig
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org2af5a75">
+<h2 id="org2af5a75">Motivation</h2>
+<ul>
+<li>counting cardinalities with limited resources (Big Data)</li>
+<li>flow monitoring from stationary sensors</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgbffd412">
+<h3 id="orgbffd412">Wikipedia Entry Cardinalities</h3>
+<ul>
+<li>Wikipedia large variety of cardinalities across its entries</li>
+<li>readily available API for data ingestion</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orge10ce3f">
+<h2 id="orge10ce3f">Flajolet-Martin Algorithm</h2>
+<div class="outline-text-2" id="text-orge10ce3f">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org0eda023">
+<h3 id="org0eda023">Basic Estimation Approach</h3>
+<div class="outline-text-3" id="text-org0eda023">
+</div>
+</section>
+<section id="slide-org0be7053">
+<h4 id="org0be7053">Hash Function</h4>
+<p>
+word is denoted as:
+\[ x = (x_0, x_1, \dots, x_p) \]
+</p>
+
+<p>
+Elements of x are hashed via:
+\[ hash(x) = (M + N \sum\limits_{j = 0}^p ord(x_j) 128^j)\: mod \: 2^L \]
+</p>
+</section>
+<section id="slide-org7d70a33">
+<h4 id="org7d70a33">Resulting Integer</h4>
+<p>
+is considered in its bit form:
+\[  y = \sum_{k \ge 0} bit(y, k)\,2^k \]
+</p>
+
+<p>
+where p(y) represents the postion of the least-significant set bit.
+</p>
+</section>
+<section id="slide-orgd25e86d">
+<h4 id="orgd25e86d">Bitmap</h4>
+<p>
+\[p(y)\] for each word in stream is stored in a \[bitmap[0 \ldots L-1]\]
+</p>
+<ul>
+<li class="fragment appear">Length of Bitmap \[L > log_2(n/nmap) + 4\]</li>
+
+</ul>
+</section>
+<section id="slide-orgfcd0601">
+<h4 id="orgfcd0601">Expected Behavior</h4>
+<p>
+If n is the number of distinct elements in M then:
+</p>
+<ul>
+<li class="fragment appear">bitmap[0] is accessed approximately n/2 times</li>
+<li class="fragment appear">bitmap[1] is accessed n/4 times</li>
+<li class="fragment appear">&#x2026;</li>
+
+</ul>
+</section>
+<section id="slide-orgfd8ab80">
+<h4 id="orgfd8ab80">In consequence</h4>
+<p>
+\[ i \gg \log_2\,n \] is expected to be zero
+\[ i \ll \log_2\,n \] is expected to be one
+\[ i \approx log_2\,n\] has a fringe of zeros and ones
+</p>
+</section>
+<section id="slide-orgc084f6c">
+<h4 id="orgc084f6c">Bias Factor</h4>
+<p>
+Flajolet and Martin identified a bias factor:
+\[ \varphi = 0.77351\cdots\]
+</p>
+</section>
+<section id="slide-orgea5aa10">
+<h4 id="orgea5aa10">Standard Deviation</h4>
+<p>
+Flajolet and Martin prove that under reasonable probablistic assumptions:
+\[ \sigma(R) \approx 1.12\]
+Therefore, result is typically 1 binary order of magnitude off (correction via nmap)
+</p>
+</section>
+<section id="slide-orgbfc5980">
+<h4 id="orgbfc5980">NMAP</h4>
+<p>
+Set of Hashing functions for each word
+\[  A = \frac{ R_1 + R_2 + \dots + R_m}m \]
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org21ce76c">
+<h3 id="org21ce76c">PCSA</h3>
+<p>
+Probabilistic Counting with Stochastic Averages
+</p>
+</section>
+<section id="slide-org77b1c8e">
+<h4 id="org77b1c8e">Modification to basic approach</h4>
+<ul>
+<li class="fragment appear">use hashing function in order to distribute each word into one of m lots via:
+\[ \alpha = h(x)\,mod\,m\]</li>
+<li class="fragment appear">update corresponding bitmap vector of alpha from h(x)
+\[ h(x)\: div\: m\] (floored)</li>
+
+</ul>
+</section>
+<section id="slide-org42a5a58">
+<h4 id="org42a5a58">Expectation</h4>
+<ul>
+<li>distribution of records falls evenly into lots so that \[(1/\varphi)\,2^A\] is a reasonable approximation</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org9d091a4">
+<h3 id="org9d091a4">Implementation</h3>
+<div class="outline-text-3" id="text-org9d091a4">
+</div>
+</section>
+<section id="slide-org07e1cd7">
+<h4 id="org07e1cd7">Hash Function</h4>
+<div class="org-src-container">
+
+<pre  class="src src-python"><code trim><span style="color: #8ac6f2; font-weight: bold;">def</span> <span style="color: #cae682;">hash_val</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>, word: <span style="color: #e5786d;">str</span>, v: <span style="color: #e5786d;">int</span>, w: <span style="color: #e5786d;">int</span><span style="color: #8c8c8c;">)</span> -&gt; <span style="color: #e5786d;">int</span>:
+<span style="background-color: #303030;"> </span>   <span style="background-color: #303030;"> </span>  <span style="color: #cae682;">l</span> = <span style="color: #e5786d;">list</span><span style="color: #8c8c8c;">(</span>word<span style="color: #8c8c8c;">)</span>
+<span style="background-color: #303030;"> </span>   <span style="background-color: #303030;"> </span>  term1: <span style="color: #e5786d;">int</span> = 0
+<span style="background-color: #303030;"> </span>   <span style="background-color: #303030;"> </span>  <span style="color: #8ac6f2; font-weight: bold;">for</span> i <span style="color: #8ac6f2; font-weight: bold;">in</span> <span style="color: #e5786d;">range</span><span style="color: #8c8c8c;">(</span><span style="color: #e5786d;">len</span><span style="color: #93a8c6;">(</span>l<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>:
+           <span style="color: #cae682;">term1</span> += <span style="color: #e5786d;">ord</span><span style="color: #8c8c8c;">(</span>l<span style="color: #93a8c6;">[</span>i<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span>*128**i
+<span style="background-color: #303030;"> </span>   <span style="background-color: #303030;"> </span>  <span style="color: #8ac6f2; font-weight: bold;">return</span> <span style="color: #e5786d;">int</span><span style="color: #8c8c8c;">(</span><span style="color: #93a8c6;">(</span>v*term1 + w<span style="color: #93a8c6;">)</span> % 2**<span style="color: #8ac6f2; font-weight: bold;">self</span>.L<span style="color: #8c8c8c;">)</span>
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org0d28a4f">
+<h4 id="org0d28a4f">Updating the bitmap</h4>
+<div class="org-src-container">
+
+<pre  class="src src-python"><code trim><span style="color: #8ac6f2; font-weight: bold;">def</span> <span style="color: #cae682;">update_bitmap</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>, word: <span style="color: #e5786d;">str</span><span style="color: #8c8c8c;">)</span> -&gt; <span style="color: #e5786d;">None</span>:
+        <span style="color: #99968b;"># </span><span style="color: #99968b;">calculate hash value</span>
+        <span style="color: #8ac6f2; font-weight: bold;">for</span> i <span style="color: #8ac6f2; font-weight: bold;">in</span> <span style="color: #e5786d;">range</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap<span style="color: #8c8c8c;">)</span>:
+            <span style="color: #99968b;"># </span><span style="color: #99968b;">calculate hash with current set of values</span>
+            <span style="color: #cae682;">hash_val</span> = <span style="color: #8ac6f2; font-weight: bold;">self</span>.hash_val<span style="color: #8c8c8c;">(</span>word=word,
+                                     v=<span style="color: #8ac6f2; font-weight: bold;">self</span>.vs<span style="color: #93a8c6;">[</span>i<span style="color: #93a8c6;">]</span>,
+                                     w=<span style="color: #8ac6f2; font-weight: bold;">self</span>.ws<span style="color: #93a8c6;">[</span>i<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span>
+            <span style="color: #99968b;"># </span><span style="color: #99968b;">find rightmost set bit in hash value</span>
+            <span style="color: #cae682;">r</span> = <span style="color: #8ac6f2; font-weight: bold;">self</span>.rightmost_set_bit<span style="color: #8c8c8c;">(</span>hash_val<span style="color: #8c8c8c;">)</span>
+            <span style="color: #8ac6f2; font-weight: bold;">if</span> r == <span style="color: #e5786d;">None</span>:  <span style="color: #99968b;"># </span><span style="color: #99968b;">cases need to be ignored as element value is 0</span>
+                <span style="color: #8ac6f2; font-weight: bold;">continue</span>
+            <span style="color: #8ac6f2; font-weight: bold;">assert</span> <span style="color: #e5786d;">type</span><span style="color: #8c8c8c;">(</span>r<span style="color: #8c8c8c;">)</span> == <span style="color: #e5786d;">int</span>, <span style="color: #95e454;">'r must be int'</span>
+            <span style="color: #8ac6f2; font-weight: bold;">if</span> <span style="color: #8ac6f2; font-weight: bold;">self</span>.bitmaps<span style="color: #8c8c8c;">[</span>i, r<span style="color: #8c8c8c;">]</span> == 0:
+                <span style="color: #8ac6f2; font-weight: bold;">self</span>.bitmaps<span style="color: #8c8c8c;">[</span>i, r<span style="color: #8c8c8c;">]</span> = 1
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org9642e3d">
+<h4 id="org9642e3d">Rightmost Set Bit</h4>
+<div class="org-src-container">
+
+<pre  class="src src-python"><code trim><span style="color: #8ac6f2; font-weight: bold;">def</span> <span style="color: #cae682;">rightmost_set_bit</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>, v: <span style="color: #e5786d;">int</span><span style="color: #8c8c8c;">)</span> -&gt; <span style="color: #e5786d;">int</span>:
+        <span style="color: #99968b;"># </span><span style="color: #99968b;">using bit operations to identify position</span>
+        <span style="color: #99968b;"># </span><span style="color: #99968b;">of least significant set bit</span>
+        <span style="color: #8ac6f2; font-weight: bold;">if</span> v == 0:
+            <span style="color: #8ac6f2; font-weight: bold;">return</span> <span style="color: #e5786d;">None</span>
+        <span style="color: #8ac6f2; font-weight: bold;">return</span> <span style="color: #e5786d;">int</span><span style="color: #8c8c8c;">(</span>math.log2<span style="color: #93a8c6;">(</span>v &amp; <span style="color: #b0b1a3;">(</span>~v + 1<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org588ac60">
+<h4 id="org588ac60">Basic Estimation Approach</h4>
+<div class="org-src-container">
+
+<pre  class="src src-python"><code trim><span style="color: #8ac6f2; font-weight: bold;">def</span> <span style="color: #cae682;">fm</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span><span style="color: #8c8c8c;">)</span> -&gt; <span style="color: #e5786d;">int</span>:
+        <span style="color: #99968b;"># </span><span style="color: #99968b;">allowing for hashing of entire stream</span>
+        <span style="color: #cae682;">vbitmap_update</span> = np.vectorize<span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.update_bitmap<span style="color: #8c8c8c;">)</span>
+        <span style="color: #99968b;"># </span><span style="color: #99968b;">contains hashed values for each element in stream</span>
+        vbitmap_update<span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.data_stream<span style="color: #8c8c8c;">)</span>
+
+        <span style="color: #8ac6f2; font-weight: bold;">if</span> <span style="color: #8ac6f2; font-weight: bold;">self</span>.optimization == <span style="color: #95e454;">'reduce'</span>:
+            <span style="color: #99968b;"># </span><span style="color: #99968b;">reduce bitmap</span>
+            <span style="color: #cae682;">red_bitmap</span> = <span style="color: #8ac6f2; font-weight: bold;">self</span>.reduce_bitmaps<span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.bitmaps<span style="color: #8c8c8c;">)</span>
+            <span style="color: #cae682;">R</span> = <span style="color: #8ac6f2; font-weight: bold;">self</span>.leftmost_zero<span style="color: #8c8c8c;">(</span>red_bitmap<span style="color: #8c8c8c;">)</span>
+            <span style="color: #8ac6f2; font-weight: bold;">return</span> <span style="color: #8ac6f2; font-weight: bold;">self</span>.C*2**R
+        <span style="color: #8ac6f2; font-weight: bold;">elif</span> <span style="color: #8ac6f2; font-weight: bold;">self</span>.optimization == <span style="color: #95e454;">'mean_r'</span>:
+            <span style="color: #cae682;">R</span> = np.zeros<span style="color: #8c8c8c;">(</span><span style="color: #93a8c6;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap,<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+            <span style="color: #8ac6f2; font-weight: bold;">for</span> i <span style="color: #8ac6f2; font-weight: bold;">in</span> <span style="color: #e5786d;">range</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap<span style="color: #8c8c8c;">)</span>:
+                <span style="color: #cae682;">R</span><span style="color: #8c8c8c;">[</span>i<span style="color: #8c8c8c;">]</span> = <span style="color: #8ac6f2; font-weight: bold;">self</span>.leftmost_zero<span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.bitmaps<span style="color: #93a8c6;">[</span>i, :<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span>
+            <span style="color: #cae682;">mean_R</span> = np.mean<span style="color: #8c8c8c;">(</span>R<span style="color: #8c8c8c;">)</span>
+            <span style="color: #8ac6f2; font-weight: bold;">return</span> <span style="color: #8ac6f2; font-weight: bold;">self</span>.C*2**mean_R
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org6f8ca18">
+<h4 id="org6f8ca18">PCSA Approach</h4>
+<div class="org-src-container">
+
+<pre  class="src src-python"><code trim><span style="color: #8ac6f2; font-weight: bold;">def</span> <span style="color: #cae682;">pcsa_bitmap</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>, word: <span style="color: #e5786d;">str</span><span style="color: #8c8c8c;">)</span> -&gt; <span style="color: #e5786d;">None</span>:
+<span style="background-color: #303030;"> </span>   <span style="color: #cae682;">hashedx</span> = <span style="color: #8ac6f2; font-weight: bold;">self</span>.hash_val<span style="color: #8c8c8c;">(</span>word=word,
+                            v=<span style="color: #8ac6f2; font-weight: bold;">self</span>.m,
+                            w=<span style="color: #8ac6f2; font-weight: bold;">self</span>.n<span style="color: #8c8c8c;">)</span>
+<span style="background-color: #303030;"> </span>   <span style="color: #cae682;">alpha</span> = hashedx % <span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap
+<span style="background-color: #303030;"> </span>   <span style="color: #cae682;">beta</span> = math.floor<span style="color: #8c8c8c;">(</span>hashedx/<span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap<span style="color: #8c8c8c;">)</span>
+<span style="background-color: #303030;"> </span>   <span style="color: #8ac6f2; font-weight: bold;">assert</span> <span style="color: #e5786d;">isinstance</span><span style="color: #8c8c8c;">(</span>beta, <span style="color: #e5786d;">int</span><span style="color: #8c8c8c;">)</span>, <span style="color: #95e454;">"index is integer"</span>
+<span style="background-color: #303030;"> </span>   <span style="color: #cae682;">idx</span> = <span style="color: #8ac6f2; font-weight: bold;">self</span>.rightmost_set_bit<span style="color: #8c8c8c;">(</span>beta<span style="color: #8c8c8c;">)</span>
+<span style="background-color: #303030;"> </span>   <span style="color: #8ac6f2; font-weight: bold;">self</span>.bitmaps<span style="color: #8c8c8c;">[</span>alpha, idx<span style="color: #8c8c8c;">]</span> = 1
+
+<span style="color: #8ac6f2; font-weight: bold;">def</span> <span style="color: #cae682;">fm_pcsa</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span><span style="color: #8c8c8c;">)</span> -&gt; <span style="color: #e5786d;">int</span>:
+<span style="background-color: #303030;"> </span>   <span style="color: #99968b;"># </span><span style="color: #99968b;">allowing for hashing of entire stream</span>
+<span style="background-color: #303030;"> </span>   <span style="color: #cae682;">vbitmap_update</span> = np.vectorize<span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.pcsa_bitmap<span style="color: #8c8c8c;">)</span>
+<span style="background-color: #303030;"> </span>   <span style="color: #99968b;"># </span><span style="color: #99968b;">contains hashed values for each element in stream</span>
+<span style="background-color: #303030;"> </span>   vbitmap_update<span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.data_stream<span style="color: #8c8c8c;">)</span>
+<span style="background-color: #303030;"> </span>   <span style="color: #cae682;">S</span> = 0
+<span style="background-color: #303030;"> </span>   <span style="color: #8ac6f2; font-weight: bold;">for</span> i <span style="color: #8ac6f2; font-weight: bold;">in</span> <span style="color: #e5786d;">range</span><span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap<span style="color: #8c8c8c;">)</span>:
+        <span style="color: #cae682;">R</span> = 0
+        <span style="color: #8ac6f2; font-weight: bold;">while</span> <span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.bitmaps<span style="color: #93a8c6;">[</span>i, R<span style="color: #93a8c6;">]</span> == 1<span style="color: #8c8c8c;">)</span> <span style="color: #8ac6f2; font-weight: bold;">and</span> <span style="color: #8c8c8c;">(</span>R &lt; <span style="color: #8ac6f2; font-weight: bold;">self</span>.L<span style="color: #8c8c8c;">)</span>:
+            <span style="color: #cae682;">R</span> += 1
+        <span style="color: #cae682;">S</span> += R
+<span style="background-color: #303030;"> </span>   <span style="color: #8ac6f2; font-weight: bold;">return</span> math.floor<span style="color: #8c8c8c;">(</span><span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap/<span style="color: #8ac6f2; font-weight: bold;">self</span>.phi*2**<span style="color: #93a8c6;">(</span>S/<span style="color: #8ac6f2; font-weight: bold;">self</span>.nmap<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org24aaf3c">
+<h3 id="org24aaf3c">Results</h3>
+<div class="outline-text-3" id="text-org24aaf3c">
+</div>
+</section>
+<section id="slide-orgaa63017">
+<h4 id="orgaa63017">Search Terms</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Search Term</th>
+<th scope="col" class="org-left">Size</th>
+<th scope="col" class="org-right">True Unique Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">List of fatal dog attacks in the United States (2010s)</td>
+<td class="org-left">small</td>
+<td class="org-right">54</td>
+</tr>
+
+<tr>
+<td class="org-left">Weisswurst</td>
+<td class="org-left">small</td>
+<td class="org-right">265</td>
+</tr>
+
+<tr>
+<td class="org-left">university of nicosia</td>
+<td class="org-left">small</td>
+<td class="org-right">1035</td>
+</tr>
+
+<tr>
+<td class="org-left">data privacy</td>
+<td class="org-left">small</td>
+<td class="org-right">1049</td>
+</tr>
+
+<tr>
+<td class="org-left">Timeline of the Israeli–Palestinian conflict 2015</td>
+<td class="org-left">medium</td>
+<td class="org-right">1406</td>
+</tr>
+
+<tr>
+<td class="org-left">covid</td>
+<td class="org-left">medium</td>
+<td class="org-right">1657</td>
+</tr>
+
+<tr>
+<td class="org-left">List of Crusades to Europe and the Holy Land</td>
+<td class="org-left">medium</td>
+<td class="org-right">2464</td>
+</tr>
+
+<tr>
+<td class="org-left">michael jordan</td>
+<td class="org-left">medium</td>
+<td class="org-right">2529</td>
+</tr>
+
+<tr>
+<td class="org-left">List of University of Pennsylvania people</td>
+<td class="org-left">large</td>
+<td class="org-right">2928</td>
+</tr>
+
+<tr>
+<td class="org-left">Donald Trump</td>
+<td class="org-left">large</td>
+<td class="org-right">4633</td>
+</tr>
+
+<tr>
+<td class="org-left">2020 Nagorno-Karabakh war</td>
+<td class="org-left">large</td>
+<td class="org-right">4643</td>
+</tr>
+
+<tr>
+<td class="org-left">List of association football</td>
+<td class="org-left">large</td>
+<td class="org-right">5883</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+<section id="slide-org49f6819">
+<h4 id="org49f6819">Low Count Entries</h4>
+
+<div id="org554f4b6" class="figure">
+<p><img src="https://552dlimages.s3-eu-west-1.amazonaws.com/distribution_small.png" alt="distribution_small.png" width="720px" />
+</p>
+</div>
+</section>
+<section id="slide-org5c39858">
+<h4 id="org5c39858">Medium Count Entries</h4>
+
+<div id="org79b944a" class="figure">
+<p><img src="https://552dlimages.s3-eu-west-1.amazonaws.com/distribution_med.png" alt="distribution_med.png" width="720px" />
+</p>
+</div>
+</section>
+<section id="slide-org1239a36">
+<h4 id="org1239a36">Large Count Entries</h4>
+
+<div id="org8ae8e5e" class="figure">
+<p><img src="https://552dlimages.s3-eu-west-1.amazonaws.com/distribution_large.png" alt="distribution_large.png" width="720px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgb886516">
+<h3 id="orgb886516">Discussion</h3>
+<ul>
+<li class="fragment appear">basic estimation is consistent and provides better accuracy compared to PCSA implementation</li>
+<li class="fragment appear">PCSA has large distribution</li>
+<li class="fragment appear">methods perform worst with low count streams</li>
+<li class="fragment appear">PCSA becomes more performant with increase of unique values</li>
+<li class="fragment appear">PCSA has significant compute performance advantage</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgdc2f8e2">
+<h3 id="orgdc2f8e2">Next Steps</h3>
+<ul>
+<li>improve hashing function for PCSA approach</li>
+<li>review LogLog, SuperLogLog, HyperLogLog and review their increase in accuracy (trade-offs performance / accuracy)</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+
+
+</script>
+</body>
+</html>
