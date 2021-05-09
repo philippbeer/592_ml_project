@@ -41,7 +41,7 @@ COMP-501DL Research\\
 Prof. Spyros Makridakis & Prof. Ioannis Katakis\\
 ** Project Goal
 verify whether clustering time series can help improve the forecasting accuracy of machine learning methods and whether it can help get a better estimate of the error using cross-validation
-*** M4 forecasting competition
+*** Data Set - M4 competition
 - M4 data set are  100,000 time series
 - split into hourly, daily, weekly, monthly, quarterly, and yearly series
 - from diverse range of domains
@@ -68,10 +68,6 @@ verify whether clustering time series can help improve the forecasting accuracy 
 ** Clustering
 - unsupervised learning technique
 - learn from data without or minimal input
-*** Philosophical view
-  - segmentation
-  - finding groups
-  - means to find distinction
 # definition of clustering here
 *** K-Means
 - grouping unlabeled data into predetermined number of groups
@@ -147,8 +143,8 @@ $$ MASE = mean \left( \frac{\lvert e_j \rvert}{\frac{1}{T-1} \sum_{t=2}^{T} \lve
 - many moving parts
 - [[https://github.com/philippbeer/m4_clustering][M4 Clustering on Github]]
 ** Outlook
-*** Algorithm
+**** Algorithm
 - hierarchical and density and grid-based methods
-*** Feature Choice
+**** Feature Choice
 - ranking of features
 ** Thank you for your attention  
