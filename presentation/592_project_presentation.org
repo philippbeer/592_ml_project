@@ -35,7 +35,7 @@
 [[https://552dlimages.s3-eu-west-1.amazonaws.com/unic_logo.png]]
 
 Philipp Beer\\
-Gradudate Program Data Science, UNIC
+Graduate Program Data Science, UNIC
 
 COMP-501DL Research\\
 Prof. Spyros Makridakis & Prof. Ioannis Katakis\\
