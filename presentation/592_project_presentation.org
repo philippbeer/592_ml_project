@@ -56,7 +56,7 @@ verify whether clustering time series can help improve the forecasting accuracy 
 - each group provides more data points to learn from
 *** Hypothesis
 - similar series are simpler to learn by ML algorithms
-- improved accuracy of the algorithm through the simplified learning process
+- improved accuracy of the algorithm
 *** Question: Can this approach help improve forecasting performance?
 
 ** Time Series Representation
@@ -103,7 +103,7 @@ $$ s(i) = \frac{b(i) - a(i)}{{\max\{a(i),b(i)\}}} $$
 - equivalent random datasets
 *** Cross-Validation
 - increase certainty about the error that is encountered in the training
-- limit effects of particularities in the data on error metrics
+- limit effects of peculiarities in the data on error metrics
 ** Benchmarking
 *** M4 Accuracy Metrics
 # say something about their properties
